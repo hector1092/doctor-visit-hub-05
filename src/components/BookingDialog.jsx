@@ -10,6 +10,7 @@ const BookingDialog = ({ open, onOpenChange }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     inquiry: "",
   });
 
@@ -23,11 +24,11 @@ const BookingDialog = ({ open, onOpenChange }) => {
       return;
     }
     
-    const message = `الاسم: ${formData.name}%0aالهاتف: ${formData.phone}%0aالاستفسار: ${formData.inquiry}`;
+    const message = `الاسم: ${formData.name}%0aالهاتف: ${formData.phone}%0aالبريد: ${formData.email}%0aالاستفسار: ${formData.inquiry}`;
     window.open(`https://wa.me/01113939319?text=${message}`, "_blank");
     onOpenChange(false);
     toast.success("تم إرسال رسالتك بنجاح");
-    setFormData({ name: "", phone: "", inquiry: "" });
+    setFormData({ name: "", phone: "", email: "", inquiry: "" });
   };
 
   return (
@@ -62,6 +63,19 @@ const BookingDialog = ({ open, onOpenChange }) => {
               onChange={handleChange}
               className="text-right"
               required
+            />
+          </div>
+          <div className="grid gap-2">
+            <label htmlFor="email" className="text-right">
+              البريد الإلكتروني
+            </label>
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="text-right"
             />
           </div>
           <div className="grid gap-2">

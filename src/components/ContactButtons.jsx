@@ -22,7 +22,7 @@ const ContactButtons = () => {
     <>
       {/* Desktop Layout */}
       <div className="hidden md:block">
-        <div className="fixed bottom-8 left-8 flex flex-row gap-4 z-50">
+        <div className="fixed bottom-8 right-8 flex flex-row gap-4 z-50">
           {buttons.map((button, index) => (
             <motion.a
               key={button.label}
@@ -30,7 +30,7 @@ const ContactButtons = () => {
               target={button.target}
               rel={button.target === "_blank" ? "noopener noreferrer" : ""}
               className={`${button.color} text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-colors duration-300 hover:opacity-90`}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
