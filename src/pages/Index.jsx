@@ -4,8 +4,9 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ServicesCarousel from "../components/ServicesCarousel";
 import ServiceCard from "../components/ServiceCard";
-import { Stethoscope, Phone, Activity, Heart, UserRound, FileHeart, Syringe, TestTubes } from "lucide-react";
+import { Stethoscope, Phone, Activity, Heart, UserRound, FileHeart, TestTubes, Syringe } from "lucide-react";
 import ParallaxSection from "../components/ParallaxSection";
+import UnionsCarousel from "../components/UnionsCarousel";
 
 const services = [
   {
@@ -50,15 +51,6 @@ const services = [
   }
 ];
 
-const features = [
-  "أطباء معتمدون من وزارة الصحة",
-  "خدمة متوفرة 24/7",
-  "تغطية جميع مناطق القاهرة الكبرى",
-  "أسعار تنافسية",
-  "خدمة عملاء متميزة",
-  "سرعة الاستجابة",
-];
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#003366] to-[#001630]">
@@ -83,21 +75,9 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <ParallaxSection className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12">لماذا نحن؟</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-center"
-                >
-                  <p className="text-xl">{feature}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* Unions Carousel Section */}
+        <ParallaxSection className="py-20">
+          <UnionsCarousel />
         </ParallaxSection>
 
         {/* Services Carousel Section */}
