@@ -59,7 +59,7 @@ export default {
         },
       },
       fontFamily: {
-        arabic: ["Cairo", "IBM Plex Sans Arabic", "sans-serif"],
+        cairo: ["Cairo", "IBM Plex Sans Arabic", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

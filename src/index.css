@@ -45,6 +45,10 @@
   direction: ltr;
 }
 
+.font-cairo {
+  font-family: 'Cairo', sans-serif !important;
+}
+
 /* تحسينات للتوافق مع الأجهزة المختلفة */
 @media (max-width: 640px) {
   .container {
