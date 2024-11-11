@@ -63,6 +63,7 @@ const Hero = () => {
               className="bg-primary hover:bg-primary/90 text-white gap-2 text-lg px-8"
               onClick={() => setIsDialogOpen(true)}
             >
+              <Phone className="w-5 h-5" />
               احجز الآن
             </Button>
             
