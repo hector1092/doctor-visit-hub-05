@@ -1,6 +1,6 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import ContactButtons from "@/components/ContactButtons";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import ContactButtons from "../components/ContactButtons";
 
 const About = () => {
   return (
