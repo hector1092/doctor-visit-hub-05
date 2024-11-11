@@ -19,9 +19,9 @@ const ContactButtons = () => {
   ];
 
   return (
-    <div className="fixed z-50 md:bottom-8 md:left-8">
+    <div className="fixed z-50">
       {/* Desktop Layout */}
-      <div className="hidden md:flex flex-row gap-4">
+      <div className="hidden md:flex md:fixed md:bottom-8 md:left-8 flex-row gap-4">
         {buttons.map((button, index) => (
           <motion.a
             key={button.label}
@@ -42,7 +42,7 @@ const ContactButtons = () => {
 
       {/* Mobile Layout */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 flex">
-        {buttons.map((button, index) => (
+        {buttons.map((button) => (
           <a
             key={button.label}
             href={button.href}

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const BookingDialog = ({ open, onOpenChange }) => {
   const [formData, setFormData] = useState({
@@ -17,8 +18,16 @@ const BookingDialog = ({ open, onOpenChange }) => {
   };
 
   const handleWhatsApp = () => {
+    if (!formData.name || !formData.phone || !formData.inquiry) {
+      toast.error("الرجاء ملء جميع الحقول المطلوبة");
+      return;
+    }
+    
     const message = `الاسم: ${formData.name}%0aالهاتف: ${formData.phone}%0aالاستفسار: ${formData.inquiry}`;
     window.open(`https://wa.me/01113939319?text=${message}`, "_blank");
+    onOpenChange(false);
+    toast.success("تم إرسال رسالتك بنجاح");
+    setFormData({ name: "", phone: "", inquiry: "" });
   };
 
   return (
