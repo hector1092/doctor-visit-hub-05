@@ -6,6 +6,35 @@ import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 
+const FormField = ({ label, id, type = "text", value, onChange, required = false }) => (
+  <div className="grid gap-2">
+    <label htmlFor={id} className="text-right">
+      {label}
+    </label>
+    {type === "textarea" ? (
+      <Textarea
+        id={id}
+        name={id}
+        value={value}
+        onChange={onChange}
+        className="text-right"
+        rows={4}
+        required={required}
+      />
+    ) : (
+      <Input
+        id={id}
+        name={id}
+        type={type}
+        value={value}
+        onChange={onChange}
+        className="text-right"
+        required={required}
+      />
+    )}
+  </div>
+);
+
 const BookingDialog = ({ open, onOpenChange }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -38,60 +67,36 @@ const BookingDialog = ({ open, onOpenChange }) => {
           <DialogTitle className="text-2xl text-center mb-4">اتصل بنا</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid gap-2">
-            <label htmlFor="name" className="text-right">
-              الاسم
-            </label>
-            <Input
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="text-right"
-              required
-            />
-          </div>
-          <div className="grid gap-2">
-            <label htmlFor="phone" className="text-right">
-              رقم الهاتف
-            </label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              className="text-right"
-              required
-            />
-          </div>
-          <div className="grid gap-2">
-            <label htmlFor="email" className="text-right">
-              البريد الإلكتروني
-            </label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="text-right"
-            />
-          </div>
-          <div className="grid gap-2">
-            <label htmlFor="inquiry" className="text-right">
-              الاستفسار
-            </label>
-            <Textarea
-              id="inquiry"
-              name="inquiry"
-              value={formData.inquiry}
-              onChange={handleChange}
-              className="text-right"
-              rows={4}
-              required
-            />
-          </div>
+          <FormField
+            label="الاسم"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <FormField
+            label="رقم الهاتف"
+            id="phone"
+            type="tel"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+          <FormField
+            label="البريد الإلكتروني"
+            id="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <FormField
+            label="الاستفسار"
+            id="inquiry"
+            type="textarea"
+            value={formData.inquiry}
+            onChange={handleChange}
+            required
+          />
           <Button
             onClick={handleWhatsApp}
             className="bg-[#25D366] hover:bg-[#128C7E] text-white gap-2 mt-4"
