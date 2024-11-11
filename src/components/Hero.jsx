@@ -13,6 +13,7 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {/* Parallax background with image carousel */}
       <motion.div 
         style={{ y: backgroundY }}
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -23,11 +24,11 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="absolute inset-0 w-full h-full"
         >
-          <motion.div className="absolute inset-0">
+          <div className="absolute inset-0 grid grid-cols-2 gap-4">
             <motion.img
               src="/images/1.png"
               alt="صورة 1"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="object-cover w-full h-full"
               initial={{ x: "-100%" }}
               animate={{ x: "0%" }}
               transition={{
@@ -37,7 +38,49 @@ const Hero = () => {
                 ease: "easeInOut"
               }}
             />
-          </motion.div>
+            <motion.img
+              src="/images/2.png"
+              alt="صورة 2"
+              className="object-cover w-full h-full"
+              initial={{ x: "100%" }}
+              animate={{ x: "0%" }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
+            <motion.img
+              src="/images/3.jpg"
+              alt="صورة 3"
+              className="object-cover w-full h-full"
+              initial={{ x: "-100%" }}
+              animate={{ x: "0%" }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 1
+              }}
+            />
+            <motion.img
+              src="/images/4.png"
+              alt="صورة 4"
+              className="object-cover w-full h-full"
+              initial={{ x: "100%" }}
+              animate={{ x: "0%" }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: 1.5
+              }}
+            />
+          </div>
         </motion.div>
         <motion.div 
           style={{ opacity }}
