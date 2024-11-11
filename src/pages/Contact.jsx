@@ -1,5 +1,6 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ContactButtons from "../components/ContactButtons";
 
 const Contact = () => {
   return (
@@ -29,6 +30,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
+      <ContactButtons />
     </div>
   );
 };
