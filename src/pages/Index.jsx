@@ -88,30 +88,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-8 text-gray-800">تواصل معنا</h2>
-            <p className="text-xl mb-8 text-gray-600">نحن هنا لمساعدتك على مدار الساعة</p>
-            <div className="flex justify-center gap-4">
-              <a
-                href="tel:01113939319"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors"
-              >
-                اتصل بنا
-              </a>
-              <a
-                href="https://wa.me/01113939319"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors"
-              >
-                واتساب
-              </a>
-            </div>
-          </div>
-        </section>
-
         <Footer />
         <ContactButtons />
       </div>
