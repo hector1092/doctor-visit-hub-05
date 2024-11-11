@@ -3,18 +3,18 @@ import { Button } from "./ui/button";
 
 const ContactButtons = () => {
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50" dir="ltr">
+    <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50 md:flex-row md:bottom-8 md:right-8" dir="ltr">
       <Button
         asChild
-        className="bg-primary hover:bg-primary/90 rounded-full w-14 h-14 p-0 shadow-lg hover:scale-110 transition-all duration-300"
+        className="bg-primary hover:bg-primary/90 rounded-full w-14 h-14 md:w-16 md:h-16 p-0 shadow-lg hover:scale-110 transition-all duration-300"
       >
         <a href="tel:01113939319" aria-label="اتصل بنا">
-          <Phone className="h-6 w-6" />
+          <Phone className="h-6 w-6 md:h-8 md:w-8" />
         </a>
       </Button>
       <Button
         asChild
-        className="bg-[#25D366] hover:bg-[#128C7E] rounded-full w-14 h-14 p-0 shadow-lg hover:scale-110 transition-all duration-300"
+        className="bg-[#25D366] hover:bg-[#128C7E] rounded-full w-14 h-14 md:w-16 md:h-16 p-0 shadow-lg hover:scale-110 transition-all duration-300"
       >
         <a
           href="https://wa.me/01113939319"
@@ -23,7 +23,7 @@ const ContactButtons = () => {
           aria-label="واتساب"
         >
           <svg
-            className="h-6 w-6"
+            className="h-6 w-6 md:h-8 md:w-8"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const ContactButtons = () => {
       </Button>
       <Button
         asChild
-        className="bg-secondary hover:bg-secondary/90 rounded-full w-14 h-14 p-0 shadow-lg hover:scale-110 transition-all duration-300"
+        className="bg-secondary hover:bg-secondary/90 rounded-full w-14 h-14 md:w-16 md:h-16 p-0 shadow-lg hover:scale-110 transition-all duration-300"
       >
         <a href="/contact" aria-label="نموذج التواصل">
           <svg
@@ -45,7 +45,7 @@ const ContactButtons = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="h-6 w-6"
+            className="h-6 w-6 md:h-8 md:w-8"
           >
             <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
             <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />

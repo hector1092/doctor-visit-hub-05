@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { Phone, MessageCircle, Stethoscope } from "lucide-react";
+import { Phone, Stethoscope } from "lucide-react";
 import { useState } from "react";
 import BookingDialog from "./BookingDialog";
 
@@ -65,15 +65,6 @@ const Hero = () => {
             >
               <Phone className="w-5 h-5" />
               احجز الآن
-            </Button>
-            
-            <Button
-              size="lg"
-              className="bg-[#25D366] hover:bg-[#128C7E] text-white gap-2 text-lg px-8"
-              onClick={() => window.open("https://wa.me/01113939319", "_blank")}
-            >
-              <MessageCircle className="w-5 h-5" />
-              واتساب
             </Button>
           </motion.div>
 
