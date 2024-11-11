@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,20 +19,39 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center gap-3">
-            <img src="/og-image.svg" alt="زيارة طبيب" className="h-10 w-10" />
-            <span className="font-bold text-2xl text-primary">زيارة طبيب</span>
+            <motion.img 
+              src="/images/log.png" 
+              alt="زيارة طبيب" 
+              className="h-12 w-12"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.span 
+              className="font-bold text-2xl text-primary"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              زيارة طبيب
+            </motion.span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {menuItems.map((item) => (
-              <Link
+            {menuItems.map((item, index) => (
+              <motion.div
                 key={item.to}
-                to={item.to}
-                className="text-gray-600 hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {item.title}
-              </Link>
+                <Link
+                  to={item.to}
+                  className="text-gray-600 hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                >
+                  {item.title}
+                </Link>
+              </motion.div>
             ))}
           </div>
 
@@ -48,7 +68,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-1 bg-white/95 backdrop-blur-sm">
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden py-4 space-y-1 bg-white/95 backdrop-blur-sm"
+          >
             {menuItems.map((item) => (
               <Link
                 key={item.to}
@@ -59,7 +84,7 @@ const Navigation = () => {
                 {item.title}
               </Link>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </nav>

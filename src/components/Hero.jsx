@@ -13,21 +13,55 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Parallax background */}
+      {/* Parallax background with image carousel */}
       <motion.div 
         style={{ y: backgroundY }}
         className="absolute inset-0 bg-cover bg-center z-0"
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80')",
-            backgroundPosition: "center",
-          }}
-        />
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <div className="absolute inset-0 grid grid-cols-2 gap-4">
+            <motion.img
+              src="/images/1.png"
+              alt="صورة 1"
+              className="object-cover w-full h-full"
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+            />
+            <motion.img
+              src="/images/2.png"
+              alt="صورة 2"
+              className="object-cover w-full h-full"
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+            />
+            <motion.img
+              src="/images/3.jpg"
+              alt="صورة 3"
+              className="object-cover w-full h-full"
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+            />
+            <motion.img
+              src="/images/4.png"
+              alt="صورة 4"
+              className="object-cover w-full h-full"
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+            />
+          </div>
+        </motion.div>
         <motion.div 
           style={{ opacity }}
-          className="absolute inset-0 bg-black/60" 
+          className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40" 
         />
       </motion.div>
 
