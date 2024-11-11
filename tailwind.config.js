@@ -55,7 +55,7 @@ export default {
         },
       },
       fontFamily: {
-        arabic: ["IBM Plex Sans Arabic", "sans-serif"],
+        arabic: ["Cairo", "IBM Plex Sans Arabic", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
