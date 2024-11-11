@@ -13,22 +13,22 @@ const unions = [
   {
     name: "نقابة العلميين",
     description: "نقابة العلميين المصرية - خدمات طبية متميزة",
-    image: "/images/union1.png"
+    image: "/placeholder.svg"
   },
   {
     name: "نقابة المهن السينمائية",
     description: "نقابة المهن السينمائية - رعاية صحية شاملة",
-    image: "/images/union2.png"
+    image: "/placeholder.svg"
   },
   {
     name: "نقابة التجاريين",
     description: "نقابة التجاريين - خدمات صحية متكاملة",
-    image: "/images/union3.png"
+    image: "/placeholder.svg"
   },
   {
     name: "نقابة المعلمين",
     description: "نقابة المعلمين - رعاية طبية متميزة",
-    image: "/images/union4.png"
+    image: "/placeholder.svg"
   }
 ];
 
