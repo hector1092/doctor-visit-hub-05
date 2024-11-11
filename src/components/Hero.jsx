@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "./ui/button";
 import { Phone, Stethoscope } from "lucide-react";
 import { useState } from "react";
@@ -6,19 +6,30 @@ import BookingDialog from "./BookingDialog";
 
 const Hero = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { scrollY } = useScroll();
+  
+  const backgroundY = useTransform(scrollY, [0, 500], ['0%', '20%']);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0.3]);
 
   return (
-    <div className="relative min-h-screen">
-      {/* Background image with overlay */}
-      <div 
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Parallax background */}
+      <motion.div 
+        style={{ y: backgroundY }}
         className="absolute inset-0 bg-cover bg-center z-0"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80')",
-          backgroundPosition: "center",
-        }}
       >
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80')",
+            backgroundPosition: "center",
+          }}
+        />
+        <motion.div 
+          style={{ opacity }}
+          className="absolute inset-0 bg-black/60" 
+        />
+      </motion.div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
@@ -33,14 +44,14 @@ const Hero = () => {
           </motion.div>
           
           <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-white to-secondary bg-clip-text text-transparent drop-shadow-lg"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            جلسات العلاج الطبيعي في منزلك،
+            <span className="text-white">جلسات العلاج الطبيعي في منزلك،</span>
             <br />
-            <span className="text-white">راحتك وسلامتك بين أيدينا.</span>
+            <span className="text-primary">راحتك وسلامتك بين أيدينا.</span>
           </motion.h2>
 
           <motion.p
