@@ -29,56 +29,33 @@ const Hero = () => {
               src="/images/1.png"
               alt="صورة 1"
               className="object-cover w-full h-full"
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut"
-              }}
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
             />
             <motion.img
               src="/images/2.png"
               alt="صورة 2"
               className="object-cover w-full h-full"
-              initial={{ x: "100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-                delay: 0.5
-              }}
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
             />
             <motion.img
               src="/images/3.jpg"
               alt="صورة 3"
               className="object-cover w-full h-full"
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-                delay: 1
-              }}
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
             />
             <motion.img
               src="/images/4.png"
               alt="صورة 4"
               className="object-cover w-full h-full"
-              initial={{ x: "100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-                delay: 1.5
-              }}
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.1 }}
+              transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
             />
           </div>
         </motion.div>
