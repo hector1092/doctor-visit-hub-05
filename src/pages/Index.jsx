@@ -6,7 +6,6 @@ import ServiceCard from "../components/ServiceCard";
 import { Stethoscope, Phone, Activity, Heart, UserRound, FileHeart, TestTubes, Syringe } from "lucide-react";
 import ParallaxSection from "../components/ParallaxSection";
 import UnionsCarousel from "../components/UnionsCarousel";
-import ContactButtons from "../components/ContactButtons";
 
 const services = [
   {
@@ -113,7 +112,6 @@ const Index = () => {
         </section>
 
         <Footer />
-        <ContactButtons />
       </div>
     </div>
   );
