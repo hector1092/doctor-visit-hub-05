@@ -27,13 +27,13 @@
   }
 
   * {
-    @apply font-arabic;
+    font-family: 'Cairo', sans-serif !important;
   }
 
   body {
     @apply bg-background text-foreground;
     direction: rtl;
-    font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Cairo', sans-serif;
   }
 }
 
