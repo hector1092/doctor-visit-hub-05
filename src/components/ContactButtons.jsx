@@ -25,7 +25,7 @@ const ContactButtons = () => {
   ];
 
   return (
-    <div className="fixed bottom-8 left-8 z-50 flex flex-col gap-4">
+    <div className="fixed bottom-8 left-8 z-50 flex flex-col gap-4 md:flex-row">
       {buttons.map((button, index) => (
         <motion.a
           key={button.label}
