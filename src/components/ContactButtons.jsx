@@ -7,20 +7,20 @@ const ContactButtons = () => {
       icon: MessageCircle,
       href: "https://wa.me/01113939319",
       label: "واتساب",
-      color: "bg-green-500 hover:bg-green-600",
+      color: "bg-[#25D366] hover:bg-[#128C7E]",
       target: "_blank"
     },
     {
       icon: Phone,
       href: "tel:01113939319",
       label: "اتصل بنا",
-      color: "bg-blue-500 hover:bg-blue-600"
+      color: "bg-primary hover:bg-primary/90"
     },
     {
       icon: Mail,
       href: "mailto:contact@example.com",
       label: "راسلنا",
-      color: "bg-purple-500 hover:bg-purple-600"
+      color: "bg-secondary hover:bg-secondary/90"
     }
   ];
 
@@ -32,7 +32,7 @@ const ContactButtons = () => {
           href={button.href}
           target={button.target}
           rel={button.target === "_blank" ? "noopener noreferrer" : ""}
-          className={`${button.color} text-white p-3 rounded-full shadow-lg flex items-center gap-2 transition-colors`}
+          className={`${button.color} text-white p-3 rounded-full shadow-lg flex items-center gap-2 transition-colors duration-300`}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.1 }}
