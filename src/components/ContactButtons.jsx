@@ -14,13 +14,13 @@ const ContactButtons = () => {
 
   return (
     <>
-      <div className="fixed md:right-6 md:top-1/2 md:-translate-y-1/2 md:flex md:flex-col bottom-6 flex flex-row justify-center gap-2 z-50 w-full px-4 md:w-auto md:px-0" dir="ltr">
+      <div className="fixed bottom-6 md:bottom-auto md:right-6 md:top-1/2 md:-translate-y-1/2 flex md:flex-col flex-row justify-center w-full md:w-auto gap-2 z-50 px-4 md:px-0" dir="ltr">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
                 asChild
-                className="bg-[#25D366] hover:bg-[#128C7E] rounded-md w-full h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none md:w-14"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-md w-full md:w-14 h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none"
               >
                 <a
                   href="https://wa.me/01113939319"
@@ -50,7 +50,7 @@ const ContactButtons = () => {
             <TooltipTrigger asChild>
               <Button
                 asChild
-                className="bg-primary hover:bg-primary/90 rounded-md w-full h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none md:w-14"
+                className="bg-primary hover:bg-primary/90 text-white rounded-md w-full md:w-14 h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none"
               >
                 <a href="tel:01113939319" aria-label="اتصل بنا">
                   <Phone className="h-6 w-6 mx-auto" />
@@ -68,7 +68,7 @@ const ContactButtons = () => {
             <TooltipTrigger asChild>
               <Button
                 onClick={() => setShowDialog(true)}
-                className="bg-secondary hover:bg-secondary/90 rounded-md w-full h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none md:w-14"
+                className="bg-secondary hover:bg-secondary/90 text-white rounded-md w-full md:w-14 h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
