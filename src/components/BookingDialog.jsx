@@ -8,7 +8,7 @@ import { toast } from "sonner";
 
 const FormField = ({ label, id, type = "text", value, onChange, required = false }) => (
   <div className="grid gap-2">
-    <label htmlFor={id} className="text-right">
+    <label htmlFor={id} className="text-right font-arabic">
       {label}
     </label>
     {type === "textarea" ? (
@@ -17,7 +17,7 @@ const FormField = ({ label, id, type = "text", value, onChange, required = false
         name={id}
         value={value}
         onChange={onChange}
-        className="text-right"
+        className="text-right font-arabic"
         rows={4}
         required={required}
       />
@@ -28,7 +28,7 @@ const FormField = ({ label, id, type = "text", value, onChange, required = false
         type={type}
         value={value}
         onChange={onChange}
-        className="text-right"
+        className="text-right font-arabic"
         required={required}
       />
     )}
@@ -64,7 +64,7 @@ const BookingDialog = ({ open, onOpenChange }) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle className="text-2xl text-center mb-4">اتصل بنا</DialogTitle>
+          <DialogTitle className="text-2xl text-center mb-4 font-arabic">اتصل بنا</DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <FormField
@@ -99,7 +99,7 @@ const BookingDialog = ({ open, onOpenChange }) => {
           />
           <Button
             onClick={handleWhatsApp}
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white gap-2 mt-4"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white gap-2 mt-4 font-arabic"
           >
             <MessageCircle className="w-5 h-5" />
             إرسال

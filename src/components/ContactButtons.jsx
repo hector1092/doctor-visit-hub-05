@@ -12,7 +12,7 @@ const ContactButton = ({ icon: Icon, onClick, label, color }) => (
     whileHover={{ scale: 1.05 }}
   >
     <Icon className="w-5 h-5" />
-    <span className="text-lg font-semibold">{label}</span>
+    <span className="text-lg font-semibold font-arabic">{label}</span>
   </motion.button>
 );
 
@@ -44,7 +44,7 @@ const ContactButtons = () => {
     <>
       {/* Desktop Layout */}
       <div className="hidden md:block">
-        <div className="fixed bottom-8 left-8 flex flex-col gap-4 z-50">
+        <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
           {buttons.map((button, index) => (
             <ContactButton
               key={button.label}
@@ -64,7 +64,7 @@ const ContactButtons = () => {
             <button
               key={button.label}
               onClick={button.onClick}
-              className={`${button.color} flex-1 text-white py-4 flex items-center justify-center gap-2`}
+              className={`${button.color} flex-1 text-white py-4 flex items-center justify-center gap-2 font-arabic`}
             >
               <button.icon className="w-5 h-5" />
               <span className="text-base font-semibold">{button.label}</span>

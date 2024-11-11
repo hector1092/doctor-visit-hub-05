@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import WhatsAppButton from "../components/WhatsAppButton";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ServicesCarousel from "../components/ServicesCarousel";
@@ -7,6 +6,7 @@ import ServiceCard from "../components/ServiceCard";
 import { Stethoscope, Phone, Activity, Heart, UserRound, FileHeart, TestTubes, Syringe } from "lucide-react";
 import ParallaxSection from "../components/ParallaxSection";
 import UnionsCarousel from "../components/UnionsCarousel";
+import ContactButtons from "../components/ContactButtons";
 
 const services = [
   {
@@ -113,7 +113,7 @@ const Index = () => {
         </section>
 
         <Footer />
-        <WhatsAppButton />
+        <ContactButtons />
       </div>
     </div>
   );
