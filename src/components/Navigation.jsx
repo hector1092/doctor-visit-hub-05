@@ -7,9 +7,17 @@ import { motion } from "framer-motion";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToAbout = (e) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const menuItems = [
     { title: "الصفحة الرئيسية", to: "/" },
-    { title: "من نحن", to: "/about" },
+    { title: "من نحن", to: "#about", onClick: scrollToAbout },
     { title: "احجز الآن", to: "/booking" },
   ];
 
@@ -47,6 +55,7 @@ const Navigation = () => {
               >
                 <Link
                   to={item.to}
+                  onClick={item.onClick}
                   className="text-gray-600 hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
                 >
                   {item.title}
@@ -59,7 +68,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden hover:bg-gray-100"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
@@ -78,8 +87,11 @@ const Navigation = () => {
               <Link
                 key={item.to}
                 to={item.to}
+                onClick={(e) => {
+                  item.onClick?.(e);
+                  setIsOpen(false);
+                }}
                 className="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-primary transition-colors rounded-md"
-                onClick={() => setIsOpen(false)}
               >
                 {item.title}
               </Link>
