@@ -7,7 +7,7 @@ const ElderlyPhysioInfo = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible((prev) => !prev);
-    }, 10000); // Toggle every 10 seconds
+    }, 3000); // Changed from 10000 to 3000 milliseconds
 
     return () => clearInterval(interval);
   }, []);
