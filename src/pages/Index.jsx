@@ -5,7 +5,6 @@ import ServicesCarousel from "../components/ServicesCarousel";
 import { motion } from "framer-motion";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
-import ImageCarousel from "../components/ImageCarousel";
 import UnionsCarousel from "../components/UnionsCarousel";
 
 const Index = () => {
@@ -59,10 +58,10 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="container mx-auto px-4"
           >
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">من نحن</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">علاج طبيعي منزلي على أيدي متخصصين معتمدين</h2>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-4xl mx-auto">
               <p className="text-lg text-gray-700 leading-relaxed text-center">
-                موقع زيارة طبيب هو المنصة الأولى في مصر التي تعمل على تنظيم وتوفير الرعاية الطبية والصحية، خاصة لكبار السن والحالات المزمنة. نحن نعمل كمنظومة رائدة لتنسيق الخدمات الصحية المتكاملة في المنزل بين العميل ومزودي الخدمة. نقدم خدماتنا من خلال زيارات طبية منزلية أو استشارات طبية عن بُعد، وننفرد بميزة متابعة عملائنا مدى الحياة. نسعى باستمرار لتحسين جودة الخدمة الصحية المقدمة، بهدف الارتقاء بجميع قطاعات الرعاية الصحية في مصر.
+                جلسات علاج طبيعي بالمنزل تُعتبر واحدة من أبرز الخدمات التي يقدمها دكتوركير للخدمات الطبية المنزلية في مختلف أنحاء القاهرة الكبرى والجيزة بأعلى جودة وأفضل أسعار جلسات العلاج الطبيعي. حيث أننا، على عكس الكثير من مراكز العلاج الطبيعي الأخرى، نختار فقط دكاترة متخصصين ونحرص على التأكد من خبراتهم العملية وحصولهم على شهادات علمية من كليات العلاج الطبيعي المعتمدة. ونسعى كفريق عمل متكامل في هوس كير إلى تحسين جودة الخدمات المقدمة بشكل مستمر لتحقيق أفضل النتائج وأعلى مستويات رضا العملاء.
               </p>
             </div>
           </motion.div>
