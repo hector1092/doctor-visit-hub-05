@@ -6,8 +6,12 @@ import { motion } from "framer-motion";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import ImageCarousel from "../components/ImageCarousel";
+import UnionsCarousel from "../components/UnionsCarousel";
+import useSound from "use-sound";
 
 const Index = () => {
+  const [playClick] = useSound("/sounds/click.mp3", { volume: 0.5 });
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F0F9FF] to-[#E0F2FE]">
       <Navigation />
@@ -55,6 +59,11 @@ const Index = () => {
             </motion.h2>
             <ServicesCarousel />
           </div>
+        </section>
+
+        {/* Partners Section */}
+        <section className="py-20 bg-primary">
+          <UnionsCarousel />
         </section>
 
         {/* About Us Section */}
