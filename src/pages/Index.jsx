@@ -24,22 +24,10 @@ const Index = () => {
         >
           <div className="container mx-auto px-4">
             <img
-              src="/images/33.png"
+              src="/images/12.png"
               alt="Medical Service"
               className="w-full max-w-4xl mx-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             />
-          </div>
-        </motion.section>
-
-        {/* Image Carousel Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="py-20"
-        >
-          <div className="container mx-auto px-4">
-            <ImageCarousel />
           </div>
         </motion.section>
 
