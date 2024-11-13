@@ -54,23 +54,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services/nursing" className="hover:text-primary transition-colors">
-                  التمريض المنزلي
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/home-care" className="hover:text-primary transition-colors">
-                  الرعاية المنزلية
-                </Link>
-              </li>
-              <li>
                 <Link to="/services/radiology" className="hover:text-primary transition-colors">
                   الأشعة
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/lab" className="hover:text-primary transition-colors">
-                  التحاليل
                 </Link>
               </li>
               <li>
