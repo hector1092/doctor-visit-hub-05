@@ -23,7 +23,7 @@ const ContactButtons = () => {
                 className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-md w-full md:w-14 h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none"
               >
                 <a
-                  href="https://wa.me/01113939319"
+                  href="https://wa.me/201113939319"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="واتساب"
@@ -44,7 +44,6 @@ const ContactButtons = () => {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>

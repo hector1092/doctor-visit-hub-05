@@ -54,7 +54,7 @@ const BookingDialog = ({ open, onOpenChange }) => {
     }
     
     const message = `الاسم: ${formData.name}%0aالهاتف: ${formData.phone}%0aالبريد: ${formData.email}%0aالاستفسار: ${formData.inquiry}`;
-    window.open(`https://wa.me/01113939319?text=${message}`, "_blank");
+    window.open(`https://wa.me/201113939319?text=${message}`, "_blank");
     onOpenChange(false);
     toast.success("تم إرسال رسالتك بنجاح");
     setFormData({ name: "", phone: "", email: "", inquiry: "" });

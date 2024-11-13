@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/t
 
 const WhatsAppButton = () => {
   const handleClick = () => {
-    window.open("https://wa.me/01113939319", "_blank");
+    window.open("https://wa.me/201113939319", "_blank");
   };
 
   return (
