@@ -5,6 +5,7 @@ import ServicesCarousel from "../components/ServicesCarousel";
 import { motion } from "framer-motion";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
+import ImageCarousel from "../components/ImageCarousel";
 
 const Index = () => {
   return (
@@ -13,10 +14,45 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         
+        {/* Static Image Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="py-20"
+        >
+          <div className="container mx-auto px-4">
+            <img
+              src="/images/33.png"
+              alt="Medical Service"
+              className="w-full max-w-4xl mx-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            />
+          </div>
+        </motion.section>
+
+        {/* Image Carousel Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="py-20"
+        >
+          <div className="container mx-auto px-4">
+            <ImageCarousel />
+          </div>
+        </motion.section>
+
         {/* Services Carousel Section */}
         <section className="py-20 bg-[#f4faff]">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدمتنا المميزة</h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold text-center mb-12 text-gray-800"
+            >
+              خدمتنا المميزة
+            </motion.h2>
             <ServicesCarousel />
           </div>
         </section>
