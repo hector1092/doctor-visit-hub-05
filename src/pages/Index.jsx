@@ -3,8 +3,6 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ServicesCarousel from "../components/ServicesCarousel";
 import { motion } from "framer-motion";
-import ParallaxSection from "../components/ParallaxSection";
-import UnionsCarousel from "../components/UnionsCarousel";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 
@@ -15,6 +13,14 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         
+        {/* Services Carousel Section */}
+        <section className="py-20 bg-[#f4faff]">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدمتنا المميزة</h2>
+            <ServicesCarousel />
+          </div>
+        </section>
+
         {/* About Us Section */}
         <section id="about" className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
           <motion.div 

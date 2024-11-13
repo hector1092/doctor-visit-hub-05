@@ -47,7 +47,7 @@ const ServicesCarousel = () => {
   }, []);
 
   return (
-    <div className="min-h-[300px] flex items-center justify-center">
+    <div className="min-h-[300px] flex items-center justify-center bg-[#f4faff]">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -61,7 +61,7 @@ const ServicesCarousel = () => {
             const Service = services[currentIndex];
             const Icon = Service.icon;
             return (
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4 bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center">
                   <Icon className="w-10 h-10 text-primary" />
                 </div>
