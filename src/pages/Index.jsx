@@ -15,19 +15,6 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         
-        {/* Services Carousel Section */}
-        <section className="py-20 bg-white/80 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدمات متميزة</h2>
-            <ServicesCarousel />
-          </div>
-        </section>
-
-        {/* Unions Carousel Section */}
-        <ParallaxSection className="py-20">
-          <UnionsCarousel />
-        </ParallaxSection>
-
         {/* About Us Section */}
         <section id="about" className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
           <motion.div 
@@ -37,10 +24,9 @@ const Index = () => {
             className="container mx-auto px-4"
           >
             <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">من نحن</h2>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-3xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-4xl mx-auto">
               <p className="text-lg text-gray-700 leading-relaxed text-center">
-                نحن نقدم خدمات طبية متميزة في منزلك، مع فريق من الأطباء المتخصصين والممرضين المؤهلين. 
-                هدفنا هو توفير الراحة والعناية الطبية المتكاملة لجميع المرضى في منازلهم.
+                موقع زيارة طبيب هو المنصة الأولى في مصر التي تعمل على تنظيم وتوفير الرعاية الطبية والصحية، خاصة لكبار السن والحالات المزمنة. نحن نعمل كمنظومة رائدة لتنسيق الخدمات الصحية المتكاملة في المنزل بين العميل ومزودي الخدمة. نقدم خدماتنا من خلال زيارات طبية منزلية أو استشارات طبية عن بُعد، وننفرد بميزة متابعة عملائنا مدى الحياة. نسعى باستمرار لتحسين جودة الخدمة الصحية المقدمة، بهدف الارتقاء بجميع قطاعات الرعاية الصحية في مصر.
               </p>
             </div>
           </motion.div>
