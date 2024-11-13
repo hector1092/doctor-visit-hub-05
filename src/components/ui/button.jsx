@@ -2,7 +2,6 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva } from "class-variance-authority"
 import { cn } from "@/lib/utils"
-import useSound from "use-sound"
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
@@ -34,11 +33,13 @@ const buttonVariants = cva(
 )
 
 const Button = React.forwardRef(({ className, variant, size, asChild = false, ...props }, ref) => {
-  const [playClick] = useSound("/sounds/click.mp3", { volume: 0.5 });
   const Comp = asChild ? Slot : "button"
   
   const handleClick = (e) => {
-    playClick();
+    const audio = new Audio("/sounds/click.mp3");
+    audio.volume = 0.5;
+    audio.play().catch(() => {});
+    
     if (props.onClick) {
       props.onClick(e);
     }
