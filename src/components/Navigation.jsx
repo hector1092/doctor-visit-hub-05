@@ -29,7 +29,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center gap-3">
             <motion.img 
               src="/images/log.png" 
-              alt="زيارة طبيب" 
+              alt="House Care" 
               className="h-12 w-12"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
@@ -40,7 +40,7 @@ const Navigation = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              زيارة طبيب
+              House Care
             </motion.span>
           </Link>
 
