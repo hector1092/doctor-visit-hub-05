@@ -39,7 +39,7 @@ const ServicesCarousel = () => {
   return (
     <div className="py-12 flex flex-col items-center justify-center bg-[#f4faff]">
       <motion.img
-        src="/images/12.png"
+        src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
         alt="خدمتنا المتميزة"
         className="w-full max-w-4xl mx-auto rounded-xl shadow-lg mb-8"
         initial={{ opacity: 0, y: 20 }}
