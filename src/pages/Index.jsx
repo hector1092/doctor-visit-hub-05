@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import UnionsCarousel from "../components/UnionsCarousel";
+import ElderlyPhysioInfo from "../components/ElderlyPhysioInfo";
 
 const Index = () => {
   return (
@@ -29,6 +30,11 @@ const Index = () => {
             />
           </div>
         </motion.section>
+
+        {/* Elderly Care Info Section */}
+        <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
+          <ElderlyPhysioInfo />
+        </section>
 
         {/* Services Carousel Section */}
         <section className="py-20 bg-[#f4faff]">
