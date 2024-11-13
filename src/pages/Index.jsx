@@ -16,7 +16,12 @@ const Index = () => {
         <Hero />
         
         {/* Services Carousel Section */}
-        <ServicesCarousel />
+        <section className="py-20 bg-white/80 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدمات متميزة</h2>
+            <ServicesCarousel />
+          </div>
+        </section>
 
         {/* Unions Carousel Section */}
         <ParallaxSection className="py-20">
