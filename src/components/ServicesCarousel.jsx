@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Stethoscope, Phone, Activity, Heart, UserRound, FileHeart } from "lucide-react";
+import { Stethoscope, Phone, Activity, FileHeart } from "lucide-react";
 
 const services = [
   {
@@ -17,16 +17,6 @@ const services = [
     title: "العلاج الطبيعي",
     description: "جلسات علاج طبيعي متخصصة في منزلك",
     icon: Activity,
-  },
-  {
-    title: "التمريض المنزلي",
-    description: "رعاية تمريضية متكاملة في منزلك",
-    icon: Heart,
-  },
-  {
-    title: "رعاية المسنين",
-    description: "عناية خاصة وشاملة لكبار السن",
-    icon: UserRound,
   },
   {
     title: "الأشعة المنزلية",
