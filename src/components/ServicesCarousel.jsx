@@ -37,7 +37,25 @@ const ServicesCarousel = () => {
   }, []);
 
   return (
-    <div className="min-h-[300px] flex items-center justify-center bg-[#f4faff]">
+    <div className="py-12 flex flex-col items-center justify-center bg-[#f4faff]">
+      <motion.img
+        src="/images/12.png"
+        alt="خدمتنا المتميزة"
+        className="w-full max-w-4xl mx-auto rounded-xl shadow-lg mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      />
+      
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-4xl font-bold text-center mb-12 text-gray-800"
+      >
+        خدمتنا المميزة
+      </motion.h2>
+
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
