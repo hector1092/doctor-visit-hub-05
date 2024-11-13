@@ -1,87 +1,55 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { Phone, Stethoscope } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BookingDialog from "./BookingDialog";
+
+const images = [
+  "/images/1.png",
+  "/images/2.png",
+  "/images/3.jpg",
+  "/images/4.png"
+];
 
 const Hero = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { scrollY } = useScroll();
   
   const backgroundY = useTransform(scrollY, [0, 500], ['0%', '20%']);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.3]);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Parallax background with image carousel */}
       <motion.div 
         style={{ y: backgroundY }}
         className="absolute inset-0 bg-cover bg-center z-0"
       >
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 w-full h-full"
-        >
-          <div className="absolute inset-0 grid grid-cols-2 gap-4">
-            <motion.img
-              src="/images/1.png"
-              alt="صورة 1"
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <img
+              src={images[currentImageIndex]}
+              alt={`صورة ${currentImageIndex + 1}`}
               className="object-cover w-full h-full"
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut"
-              }}
             />
-            <motion.img
-              src="/images/2.png"
-              alt="صورة 2"
-              className="object-cover w-full h-full"
-              initial={{ x: "100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-            />
-            <motion.img
-              src="/images/3.jpg"
-              alt="صورة 3"
-              className="object-cover w-full h-full"
-              initial={{ x: "-100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-                delay: 1
-              }}
-            />
-            <motion.img
-              src="/images/4.png"
-              alt="صورة 4"
-              className="object-cover w-full h-full"
-              initial={{ x: "100%" }}
-              animate={{ x: "0%" }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-                delay: 1.5
-              }}
-            />
-          </div>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
+        
         <motion.div 
           style={{ opacity }}
           className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40" 
