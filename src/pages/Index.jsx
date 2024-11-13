@@ -8,6 +8,7 @@ import ParallaxSection from "../components/ParallaxSection";
 import UnionsCarousel from "../components/UnionsCarousel";
 import ContactButtons from "../components/ContactButtons";
 import { motion } from "framer-motion";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
 
 const services = [
   {
@@ -62,17 +63,35 @@ const Index = () => {
         {/* Services Section */}
         <section className="py-20 bg-white/80 backdrop-blur-sm">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدماتنا</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold text-center mb-12 text-gray-800"
+            >
+              خدماتنا
+            </motion.h2>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            >
               {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                />
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <ServiceCard
+                    title={service.title}
+                    description={service.description}
+                    icon={service.icon}
+                  />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -93,6 +112,9 @@ const Index = () => {
             </div>
           </motion.div>
         </section>
+
+        {/* Testimonials Section */}
+        <TestimonialsCarousel />
 
         {/* Unions Carousel Section */}
         <ParallaxSection className="py-20">
