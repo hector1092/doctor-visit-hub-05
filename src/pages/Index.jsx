@@ -95,6 +95,19 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Services Carousel Section */}
+        <section className="py-20 bg-white/80 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدمات متميزة</h2>
+            <ServicesCarousel />
+          </div>
+        </section>
+
+        {/* Unions Carousel Section */}
+        <ParallaxSection className="py-20">
+          <UnionsCarousel />
+        </ParallaxSection>
+
         {/* About Us Section */}
         <section id="about" className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
           <motion.div 
@@ -115,19 +128,6 @@ const Index = () => {
 
         {/* Testimonials Section */}
         <TestimonialsCarousel />
-
-        {/* Unions Carousel Section */}
-        <ParallaxSection className="py-20">
-          <UnionsCarousel />
-        </ParallaxSection>
-
-        {/* Services Carousel Section */}
-        <section className="py-20 bg-white/80 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">خدمات متميزة</h2>
-            <ServicesCarousel />
-          </div>
-        </section>
 
         <Footer />
         <ContactButtons />
