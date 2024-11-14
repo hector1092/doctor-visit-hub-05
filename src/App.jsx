@@ -3,16 +3,25 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { navItems } from "./nav-items";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const queryClient = new QueryClient();
 
 const App = () => {
+  const welcomeSoundPlayed = useRef(false);
+
   useEffect(() => {
-    // Play welcome sound when the site loads
-    const welcomeSound = new Audio("/sounds/welcome.mp3");
-    welcomeSound.volume = 0.3;
-    welcomeSound.play().catch(() => {});
+    if (!welcomeSoundPlayed.current) {
+      const welcomeSound = new Audio("/sounds/welcome.mp3");
+      welcomeSound.volume = 0.3;
+      welcomeSound.play()
+        .then(() => {
+          welcomeSoundPlayed.current = true;
+        })
+        .catch((error) => {
+          console.error("Error playing welcome sound:", error);
+        });
+    }
   }, []);
 
   return (

@@ -8,10 +8,16 @@ import {
 } from "./ui/tooltip";
 
 const ContactButtons = () => {
-  const playBookingSound = () => {
-    const bookingSound = new Audio("/sounds/booking-success.mp3");
-    bookingSound.volume = 0.5;
-    bookingSound.play().catch(() => {});
+  const playSound = (soundFile) => {
+    const audio = new Audio(soundFile);
+    audio.volume = 0.5;
+    audio.play().catch((error) => {
+      console.error("Error playing sound:", error);
+    });
+  };
+
+  const handleClick = (soundFile) => {
+    playSound(soundFile);
   };
 
   return (
@@ -28,7 +34,7 @@ const ContactButtons = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="واتساب"
-                onClick={playBookingSound}
+                onClick={() => handleClick('/sounds/booking-success.mp3')}
               >
                 <svg
                   className="h-6 w-6 mx-auto"
@@ -46,6 +52,7 @@ const ContactButtons = () => {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
+
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -53,7 +60,11 @@ const ContactButtons = () => {
               asChild
               className="bg-primary hover:bg-primary/90 text-white rounded-md w-full md:w-14 h-14 p-0 shadow-lg hover:scale-105 transition-all duration-300 flex-1 md:flex-none"
             >
-              <a href="tel:01113939319" aria-label="اتصل بنا">
+              <a 
+                href="tel:01113939319" 
+                aria-label="اتصل بنا"
+                onClick={() => handleClick('/sounds/click.mp3')}
+              >
                 <Phone className="h-6 w-6 mx-auto" />
               </a>
             </Button>
@@ -76,6 +87,7 @@ const ContactButtons = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="احجز الآن"
+                onClick={() => handleClick('/sounds/booking-success.mp3')}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
