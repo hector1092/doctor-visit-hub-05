@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import BookingDialog from "./BookingDialog";
 
 const images = [
-  "/images/1.png",
-  "/images/2.png",
-  "/images/3.jpg",
-  "/images/4.png"
+  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+  "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843",
+  "https://images.unsplash.com/photo-1501854140801-50d01698950b"
 ];
 
 const Hero = () => {
