@@ -8,6 +8,12 @@ import {
 } from "./ui/tooltip";
 
 const ContactButtons = () => {
+  const playBookingSound = () => {
+    const bookingSound = new Audio("/sounds/booking-success.mp3");
+    bookingSound.volume = 0.5;
+    bookingSound.play().catch(() => {});
+  };
+
   return (
     <div className="fixed bottom-6 md:bottom-auto md:right-6 md:top-1/2 md:-translate-y-1/2 flex md:flex-col flex-row justify-center w-full md:w-auto gap-2 z-50 px-4 md:px-0" dir="ltr">
       <TooltipProvider>
@@ -22,6 +28,7 @@ const ContactButtons = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="واتساب"
+                onClick={playBookingSound}
               >
                 <svg
                   className="h-6 w-6 mx-auto"
