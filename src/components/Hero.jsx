@@ -6,7 +6,6 @@ import BookingDialog from "./BookingDialog";
 
 const images = [
   "/images/1.png",
-  "/images/2.png",
   "/images/3.jpg",
   "/images/4.png"
 ];
