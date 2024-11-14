@@ -97,10 +97,12 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white gap-2 text-lg px-8"
-              onClick={() => setIsDialogOpen(true)}
+              asChild
             >
-              <Phone className="w-5 h-5" />
-              احجز الآن
+              <a href="https://wa.me/201113939319" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-5 h-5" />
+                احجز الآن
+              </a>
             </Button>
           </motion.div>
 
