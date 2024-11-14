@@ -4,13 +4,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 const images = [
-  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-  "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843",
-  "https://images.unsplash.com/photo-1501854140801-50d01698950b",
-  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-  "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843"
+  "/images/4.png",
+  "/images/44.jpg",
+  "/images/55.jpg",
+  "/images/66.jpeg",
+  "/images/1.png",
+  "/images/2.png",
+  "/images/3.jpg"
 ];
 
 const ImageCarousel = () => {
