@@ -19,7 +19,6 @@ const Navigation = () => {
     { title: "الصفحة الرئيسية", to: "/" },
     { title: "من نحن", to: "#about", onClick: scrollToAbout },
     { title: "المقالات", to: "/articles" },
-    { title: "احجز الآن", to: "/booking" },
   ];
 
   return (
