@@ -30,24 +30,26 @@ const Index = () => {
         </motion.section>
 
         {/* Video Section */}
-        <section className="relative h-[400px] overflow-hidden">
-          <video
-            src="/videos/vesta.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center">
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-5xl font-bold text-center text-white shadow-lg"
+              className="text-4xl font-bold text-center mb-8 text-gray-800"
             >
               رعاية صحية متكاملة
             </motion.h2>
+            <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl">
+              <video
+                src="/videos/vesta.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full aspect-video object-cover"
+              />
+            </div>
           </div>
         </section>
 
