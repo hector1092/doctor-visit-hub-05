@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import UnionsCarousel from "../components/UnionsCarousel";
+import TextCarousel from "../components/TextCarousel";
 
 const Index = () => {
   return (
@@ -14,19 +15,22 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         
-        {/* Static Image Section */}
+        {/* Static Image with Text Carousel Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="py-20"
+          className="py-20 relative"
         >
           <div className="container mx-auto px-4">
-            <img
-              src="/images/12.png"
-              alt="Medical Service"
-              className="w-full max-w-4xl mx-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-            />
+            <div className="relative">
+              <img
+                src="/images/12.png"
+                alt="Medical Service"
+                className="w-full max-w-4xl mx-auto rounded-xl shadow-lg"
+              />
+              <TextCarousel />
+            </div>
           </div>
         </motion.section>
 
@@ -48,23 +52,6 @@ const Index = () => {
         {/* Partners Section */}
         <section className="py-20 bg-primary">
           <UnionsCarousel />
-        </section>
-
-        {/* About Us Section */}
-        <section id="about" className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-4"
-          >
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">علاج طبيعي منزلي على أيدي متخصصين معتمدين</h2>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-4xl mx-auto">
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
-                جلسات علاج طبيعي بالمنزل تُعتبر واحدة من أبرز الخدمات التي يقدمها هوس كير للخدمات الطبية المنزلية في مختلف أنحاء القاهرة الكبرى والجيزة بأعلى جودة وأفضل أسعار جلسات العلاج الطبيعي. حيث أننا، على عكس الكثير من مراكز العلاج الطبيعي الأخرى، نختار فقط دكاترة متخصصين ونحرص على التأكد من خبراتهم العملية وحصولهم على شهادات علمية من كليات العلاج الطبيعي المعتمدة. ونسعى كفريق عمل متكامل في هوس كير إلى تحسين جودة الخدمات المقدمة بشكل مستمر لتحقيق أفضل النتائج وأعلى مستويات رضا العملاء.
-              </p>
-            </div>
-          </motion.div>
         </section>
 
         {/* Testimonials Section */}
