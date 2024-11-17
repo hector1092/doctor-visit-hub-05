@@ -7,14 +7,19 @@ import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import TextCarousel from "../components/TextCarousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import useSound from 'use-sound';
 import { useEffect } from "react";
 
 const Index = () => {
-  const [playSuccess] = useSound('/sounds/booking-success.mp3', { volume: 0.3 });
-
   useEffect(() => {
-    playSuccess();
+    const playWelcomeSound = () => {
+      const audio = new Audio('/sounds/booking-success.mp3');
+      audio.volume = 0.3;
+      audio.play().catch(error => {
+        console.error("Error playing sound:", error);
+      });
+    };
+
+    playWelcomeSound();
   }, []);
 
   return (
