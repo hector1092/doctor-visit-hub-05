@@ -29,27 +29,36 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* Services Carousel Section with Video Background */}
-        <section className="py-20 relative overflow-hidden">
-          {/* Video Background */}
-          <div className="absolute inset-0 w-full h-full">
-            <video
-              src="/videos/vesta.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+        {/* Video Section */}
+        <section className="relative h-[400px] overflow-hidden">
+          <video
+            src="/videos/vesta.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-5xl font-bold text-center text-white shadow-lg"
+            >
+              رعاية صحية متكاملة
+            </motion.h2>
           </div>
+        </section>
 
+        {/* Services Carousel Section */}
+        <section className="py-20 relative overflow-hidden bg-[#B7E4F9]/50">
           <div className="container mx-auto px-4 relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12 text-white"
+              className="text-4xl font-bold text-center mb-12 text-gray-800"
             >
               خدمتنا المميزة
             </motion.h2>
