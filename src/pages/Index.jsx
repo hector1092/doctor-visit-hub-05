@@ -80,10 +80,19 @@ const Index = () => {
               الأسئلة الشائعة
             </motion.h2>
             <div className="max-w-3xl mx-auto bg-white/30 backdrop-blur-sm rounded-lg shadow-lg p-6">
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
-                  <AccordionTrigger className="text-right text-xl font-semibold text-gray-800">
-                    ما هي الحالات التي تحتاج إلى جلسات علاج طبيعي بالمنزل؟
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border-b border-gray-200/30">
+                  <AccordionTrigger className="text-right text-xl font-semibold text-gray-800 hover:text-primary hover:no-underline">
+                    ما هي جلسات العلاج الطبيعي؟
+                  </AccordionTrigger>
+                  <AccordionContent className="text-right text-gray-800 text-lg leading-relaxed">
+                    جلسات العلاج الطبيعي هي نوع من الخدمات الطبية التي تهدف إلى تحسين الأداء الجسدي والتخفيف من الألم وتعزيز الحركة لدى الأشخاص الذين يعانون من إصابات، أمراض، أو إعاقات جسدية. تُقدَّم هذه الجلسات بواسطة متخصصين في العلاج الطبيعي، ويُستخدم خلالها تقنيات متنوعة تتناسب مع حالة كل مريض.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border-b border-gray-200/30">
+                  <AccordionTrigger className="text-right text-xl font-semibold text-gray-800 hover:text-primary hover:no-underline">
+                    ما هي الحالات التي تحتاج علاج طبيعي؟
                   </AccordionTrigger>
                   <AccordionContent className="text-right text-gray-800 text-lg">
                     <p className="mb-4">هناك العديد من الحالات التي تحتاج إلى أخصائي علاج طبيعي في المنزل، ومن أكثر تلك الحالات شيوعاً:</p>
@@ -95,9 +104,19 @@ const Index = () => {
                       <li>متلازمة النفق الرسغي وإصبع الزناد</li>
                       <li>أمراض ومشاكل الجهاز العصبي مثل السكتة الدماغية، وإصابات الحبل الشوكي، والتصلب المتعدد، وحالات الشلل</li>
                       <li>أمراض ومشاكل المسنين مثل ضعف العضلات، والخمول الحركي</li>
-                      <li>التأهيل قبل وبعد العمليات الجراحية مثل تأهيل الكسور، والتأهيل بعد تركيب المفاصل الصناعية، والتأهيل قبل وبعد عمليات بتر الأطراف</li>
+                      <li>التأهيل قبل وبعد العمليات الجراحية</li>
                       <li>الإصابات الرياضية مثل تمزقات العضلات، وقطع الأربطة الصليبية، وخلع مفصل الكتف</li>
                     </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border-b border-gray-200/30">
+                  <AccordionTrigger className="text-right text-xl font-semibold text-gray-800 hover:text-primary hover:no-underline">
+                    ما هي مهام دكتور العلاج الطبيعي في المنزل مع زيارة طبيب؟
+                  </AccordionTrigger>
+                  <AccordionContent className="text-right text-gray-800 text-lg leading-relaxed">
+                    <p className="mb-4">تتركز مهام دكتور علاج طبيعي في المنزل على استعادة قدرة الإنسان البدنية والنفسية باستخدام مختلف الأساليب العلمية مثل علم الحركة والعلاج اليدوي، والعلاج بالتمرينات، والعلاج الكهربائي باستخدام الأجهزة المتنقلة الحديثة لضمان سرعة التعافي، مع مراعاة حالة المريض الصحية أو الشخص الذي يتلقى العلاج.</p>
+                    <p>عادةً يحتاج المريض إلى جلسات العلاج الطبيعي بعد الخروج من عملية كبيرة أو كسر أو كعلاج للآلام المزمنة، ويكون لطبيب العظام علاقة مكملة مع طبيب العلاج الطبيعي في تحديد مدى تحسن الحالة ووضعها الصحي، كما يلعب دوراً كبيراً منذ البداية في توجيه المريض لضرورة عمل جلسات العلاج الطبيعي مع دكتور علاج طبيعي في المنزل.</p>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
