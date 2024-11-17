@@ -64,7 +64,7 @@ const TextCarousel = () => {
               ))}
             </ul>
           </motion.div>
-        </motion.Presence>
+        </AnimatePresence>
       </div>
 
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
