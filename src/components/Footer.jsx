@@ -101,18 +101,18 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-primary">تحديثات التطبيقات</h3>
             <p className="text-gray-400 mb-4">COMING SOON</p>
             <div className="flex flex-col gap-4">
-              <motion.img
+              <motion.div
                 whileHover={{ scale: 1.05 }}
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Google Play"
-                className="h-12 w-auto opacity-50 cursor-not-allowed"
-              />
-              <motion.img
+                className="h-12 w-auto opacity-50 cursor-not-allowed bg-gray-800 rounded-lg flex items-center justify-center"
+              >
+                <span className="text-gray-400">Google Play</span>
+              </motion.div>
+              <motion.div
                 whileHover={{ scale: 1.05 }}
-                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                alt="App Store"
-                className="h-12 w-auto opacity-50 cursor-not-allowed"
-              />
+                className="h-12 w-auto opacity-50 cursor-not-allowed bg-gray-800 rounded-lg flex items-center justify-center"
+              >
+                <span className="text-gray-400">App Store</span>
+              </motion.div>
             </div>
           </motion.div>
         </div>
