@@ -158,6 +158,18 @@ const Hero = () => {
               </motion.p>
             ))}
           </motion.div>
+
+          {/* Video Section */}
+          <div className="mt-16 w-full max-w-4xl mx-auto">
+            <video
+              src="/videos/vesta.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full rounded-lg shadow-xl"
+            />
+          </div>
         </div>
       </div>
 
