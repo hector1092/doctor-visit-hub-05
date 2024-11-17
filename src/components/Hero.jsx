@@ -75,7 +75,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              زيارة طبيب
+              Visit a doctor
             </motion.h1>
           </motion.div>
           

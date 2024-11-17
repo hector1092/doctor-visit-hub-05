@@ -134,7 +134,7 @@ const Footer = () => {
               <Stethoscope className="w-6 h-6 text-primary" />
             </motion.div>
             <p className="text-gray-400 text-center">
-              © زيارة طبيب - جميع الحقوق محفوظة {new Date().getFullYear()}
+              © Visit a doctor - جميع الحقوق محفوظة {new Date().getFullYear()}
             </p>
           </div>
         </div>

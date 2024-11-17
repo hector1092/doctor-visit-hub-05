@@ -40,7 +40,7 @@ const Navigation = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              زيارة طبيب
+              Visit a doctor
             </motion.span>
           </Link>
 
