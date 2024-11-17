@@ -15,20 +15,15 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         
-        {/* Static Image with Text Carousel Section */}
+        {/* Text Carousel Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="py-20 relative"
+          className="py-20 relative bg-gradient-to-br from-primary/5 to-secondary/5"
         >
           <div className="container mx-auto px-4">
             <div className="relative">
-              <img
-                src="/images/12.png"
-                alt="Medical Service"
-                className="w-full max-w-4xl mx-auto rounded-xl shadow-lg"
-              />
               <TextCarousel />
             </div>
           </div>
