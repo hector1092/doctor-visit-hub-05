@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#B7E4F9]">
+    <div className="min-h-screen" style={{ backgroundColor: "#a7c1e6" }}>
       <Navigation />
       <div className="pt-16">
         <Hero />
@@ -20,7 +20,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="py-20 relative bg-[#B7E4F9]/50"
+          className="py-20 relative bg-[#a7c1e6]/50"
         >
           <div className="container mx-auto px-4">
             <div className="relative">
@@ -54,7 +54,7 @@ const Index = () => {
         </section>
 
         {/* Services Carousel Section */}
-        <section className="py-20 relative overflow-hidden bg-[#B7E4F9]/50">
+        <section className="py-20 relative overflow-hidden bg-[#a7c1e6]/50">
           <div className="container mx-auto px-4 relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ const Index = () => {
         </section>
 
         {/* Q&A Section */}
-        <section className="py-20 bg-[#B7E4F9]/20">
+        <section className="py-20 bg-[#a7c1e6]/20">
           <div className="container mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
