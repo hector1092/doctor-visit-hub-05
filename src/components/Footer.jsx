@@ -22,8 +22,8 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-lg font-bold mb-4 text-primary">روابط هامة</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-bold mb-6 text-primary">روابط هامة</h3>
+            <ul className="space-y-3">
               {[
                 { to: "/terms", text: "الشروط والأحكام" },
                 { to: "/about", text: "من نحن" },
@@ -31,7 +31,7 @@ const Footer = () => {
                 { to: "/contact", text: "تواصل معنا" }
               ].map((link) => (
                 <motion.li key={link.to} whileHover="hover" variants={linkVariants}>
-                  <Link to={link.to} className="hover:text-primary transition-colors">
+                  <Link to={link.to} className="hover:text-primary transition-colors text-lg">
                     {link.text}
                   </Link>
                 </motion.li>
@@ -45,8 +45,8 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-lg font-bold mb-4 text-primary">خدماتنا</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-bold mb-6 text-primary">خدماتنا</h3>
+            <ul className="space-y-3">
               {[
                 { to: "/services/home-visit", text: "كشف منزلي" },
                 { to: "/services/phone-consultation", text: "استشارة هاتفية" },
@@ -55,7 +55,7 @@ const Footer = () => {
                 { to: "/services/other", text: "خدمات أخرى" }
               ].map((service) => (
                 <motion.li key={service.to} whileHover="hover" variants={linkVariants}>
-                  <Link to={service.to} className="hover:text-primary transition-colors">
+                  <Link to={service.to} className="hover:text-primary transition-colors text-lg">
                     {service.text}
                   </Link>
                 </motion.li>
@@ -69,16 +69,16 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-lg font-bold mb-4 text-primary">تواصل معنا</h3>
+            <h3 className="text-xl font-bold mb-6 text-primary">تواصل معنا</h3>
             <ul className="space-y-4">
               {[
                 { Icon: Phone, text: "01113939319", href: "tel:01113939319" },
                 { Icon: Mail, text: "info@example.com", href: "mailto:info@example.com" },
-                { Icon: MapPin, text: "القاهرة، مصر" }
+                { Icon: MapPin, text: "القاهرة الكبرى والجيزة" }
               ].map((item, index) => (
-                <motion.li key={index} className="flex items-center gap-2" whileHover="hover">
+                <motion.li key={index} className="flex items-center gap-3 text-lg" whileHover="hover">
                   <motion.div variants={iconVariants}>
-                    <item.Icon className="w-5 h-5 text-primary" />
+                    <item.Icon className="w-6 h-6 text-primary" />
                   </motion.div>
                   {item.href ? (
                     <a href={item.href} className="hover:text-primary transition-colors">
@@ -98,8 +98,8 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h3 className="text-lg font-bold mb-4 text-primary">تحديثات التطبيقات</h3>
-            <p className="text-gray-400 mb-4">COMING SOON</p>
+            <h3 className="text-xl font-bold mb-6 text-primary">تحديثات التطبيقات</h3>
+            <p className="text-gray-400 mb-4 text-lg">COMING SOON</p>
             <div className="flex flex-col gap-4">
               <motion.img
                 whileHover={{ scale: 1.05 }}
@@ -133,7 +133,7 @@ const Footer = () => {
             >
               <Stethoscope className="w-6 h-6 text-primary" />
             </motion.div>
-            <p className="text-gray-400 text-center">
+            <p className="text-gray-400 text-center text-lg">
               © Visit a doctor - جميع الحقوق محفوظة {new Date().getFullYear()}
             </p>
           </div>

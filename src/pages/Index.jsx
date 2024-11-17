@@ -29,14 +29,27 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* Services Carousel Section */}
-        <section className="py-20 bg-[#B7E4F9]/30">
-          <div className="container mx-auto px-4">
+        {/* Services Carousel Section with Video Background */}
+        <section className="py-20 relative overflow-hidden">
+          {/* Video Background */}
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              src="/videos/vesta.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12 text-gray-800"
+              className="text-4xl font-bold text-center mb-12 text-white"
             >
               خدمتنا المميزة
             </motion.h2>
@@ -58,10 +71,10 @@ const Index = () => {
             <div className="max-w-3xl mx-auto bg-white/30 backdrop-blur-sm rounded-lg shadow-lg p-6">
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="text-right text-lg font-semibold text-gray-800">
+                  <AccordionTrigger className="text-right text-xl font-semibold text-gray-800">
                     ما هي الحالات التي تحتاج إلى جلسات علاج طبيعي بالمنزل؟
                   </AccordionTrigger>
-                  <AccordionContent className="text-right text-gray-800">
+                  <AccordionContent className="text-right text-gray-800 text-lg">
                     <p className="mb-4">هناك العديد من الحالات التي تحتاج إلى أخصائي علاج طبيعي في المنزل، ومن أكثر تلك الحالات شيوعاً:</p>
                     <ul className="space-y-2 list-disc list-inside mr-4">
                       <li>أمراض ومشاكل العظام والعمود الفقري</li>
