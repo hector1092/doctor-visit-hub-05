@@ -53,10 +53,10 @@ const ServicesCarousel = () => {
             return (
               <div className="flex flex-col items-center gap-4 bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30">
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-                  <Icon className="w-10 h-10 text-white" />
+                  <Icon className="w-10 h-10 text-gray-900" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">{Service.title}</h3>
-                <p className="text-white/90 text-lg font-medium">{Service.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900">{Service.title}</h3>
+                <p className="text-gray-900 text-lg font-medium">{Service.description}</p>
               </div>
             );
           })()}

@@ -7,15 +7,22 @@ import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
 import TextCarousel from "../components/TextCarousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import useSound from 'use-sound';
+import { useEffect } from "react";
 
 const Index = () => {
+  const [playSuccess] = useSound('/sounds/booking-success.mp3', { volume: 0.3 });
+
+  useEffect(() => {
+    playSuccess();
+  }, []);
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#a7c1e6" }}>
       <Navigation />
       <div className="pt-16">
         <Hero />
         
-        {/* Text Carousel Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,20 +36,19 @@ const Index = () => {
           </div>
         </motion.section>
 
-        {/* Video Section */}
-        <section className="py-12 bg-white">
+        <section className="py-12 relative overflow-hidden" style={{ backgroundColor: "#a7c1e6" }}>
           <div className="container mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-8 text-gray-800"
+              className="text-4xl font-bold text-center mb-8 text-gray-900"
             >
               رعاية صحية متكاملة
             </motion.h2>
-            <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl">
+            <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
               <video
-                src="/videos/vesta.mp4"
+                src="/videos/161.mp4"
                 autoPlay
                 loop
                 muted
@@ -53,14 +59,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Services Carousel Section */}
-        <section className="py-20 relative overflow-hidden bg-[#a7c1e6]/50">
+        <section className="py-20 relative overflow-hidden" style={{ backgroundColor: "#a7c1e6" }}>
           <div className="container mx-auto px-4 relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12 text-gray-800"
+              className="text-4xl font-bold text-center mb-12 text-gray-900"
             >
               خدمتنا المميزة
             </motion.h2>
@@ -68,14 +73,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Q&A Section */}
-        <section className="py-20 bg-[#a7c1e6]/20">
+        <section className="py-20" style={{ backgroundColor: "#a7c1e6" }}>
           <div className="container mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12 text-gray-800"
+              className="text-4xl font-bold text-center mb-12 text-gray-900"
             >
               الأسئلة الشائعة
             </motion.h2>
@@ -124,9 +128,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
         <TestimonialsCarousel />
-
         <Footer />
         <ContactButtons />
       </div>
