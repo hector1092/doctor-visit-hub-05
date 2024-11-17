@@ -10,7 +10,7 @@ import TextCarousel from "../components/TextCarousel";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F0F9FF] to-[#E0F2FE]">
+    <div className="min-h-screen bg-[#B7E4F9]">
       <Navigation />
       <div className="pt-16">
         <Hero />
@@ -20,7 +20,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="py-20 relative bg-gradient-to-br from-primary/5 to-secondary/5"
+          className="py-20 relative bg-[#B7E4F9]/50"
         >
           <div className="container mx-auto px-4">
             <div className="relative">
@@ -30,7 +30,7 @@ const Index = () => {
         </motion.section>
 
         {/* Services Carousel Section */}
-        <section className="py-20 bg-[#f4faff]">
+        <section className="py-20 bg-[#B7E4F9]/30">
           <div className="container mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ const Index = () => {
         </section>
 
         {/* Partners Section */}
-        <section className="py-20 bg-primary">
+        <section className="py-20 bg-[#B7E4F9]/20">
           <UnionsCarousel />
         </section>
 
