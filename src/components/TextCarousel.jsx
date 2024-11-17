@@ -43,7 +43,7 @@ const TextCarousel = () => {
 
   return (
     <div className="relative min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center p-4">
-      <div className="bg-gradient-to-br from-gray-900/95 to-gray-800/95 rounded-2xl shadow-2xl w-full max-w-4xl mx-auto overflow-hidden">
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl w-full max-w-4xl mx-auto overflow-hidden border border-white/20">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -54,7 +54,7 @@ const TextCarousel = () => {
             className="p-8 md:p-12 lg:p-16"
           >
             <motion.h3 
-              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-primary text-center"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-gray-800 text-center"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -68,7 +68,7 @@ const TextCarousel = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="text-base md:text-lg lg:text-xl text-white/90 hover:text-white transition-colors duration-200 flex items-center gap-3"
+                  className="text-base md:text-lg lg:text-xl text-gray-800 hover:text-gray-900 transition-colors duration-200 flex items-center gap-3 font-semibold"
                 >
                   <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                   {item}
@@ -86,7 +86,7 @@ const TextCarousel = () => {
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentIndex 
                 ? "bg-primary w-6" 
-                : "bg-white/50 hover:bg-white/70"
+                : "bg-primary/50 hover:bg-primary/70"
             }`}
             onClick={() => setCurrentIndex(index)}
             aria-label={`انتقل إلى المجموعة ${index + 1}`}

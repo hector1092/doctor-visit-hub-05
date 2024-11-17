@@ -55,13 +55,13 @@ const Index = () => {
             >
               الأسئلة الشائعة
             </motion.h2>
-            <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <div className="max-w-3xl mx-auto bg-white/30 backdrop-blur-sm rounded-lg shadow-lg p-6">
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="text-right text-lg font-semibold">
+                  <AccordionTrigger className="text-right text-lg font-semibold text-gray-800">
                     ما هي الحالات التي تحتاج إلى جلسات علاج طبيعي بالمنزل؟
                   </AccordionTrigger>
-                  <AccordionContent className="text-right">
+                  <AccordionContent className="text-right text-gray-800">
                     <p className="mb-4">هناك العديد من الحالات التي تحتاج إلى أخصائي علاج طبيعي في المنزل، ومن أكثر تلك الحالات شيوعاً:</p>
                     <ul className="space-y-2 list-disc list-inside mr-4">
                       <li>أمراض ومشاكل العظام والعمود الفقري</li>
