@@ -5,7 +5,6 @@ import ServicesCarousel from "../components/ServicesCarousel";
 import { motion } from "framer-motion";
 import ContactButtons from "../components/ContactButtons";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
-import UnionsCarousel from "../components/UnionsCarousel";
 import TextCarousel from "../components/TextCarousel";
 
 const Index = () => {
@@ -42,11 +41,6 @@ const Index = () => {
             </motion.h2>
             <ServicesCarousel />
           </div>
-        </section>
-
-        {/* Partners Section */}
-        <section className="py-20 bg-[#B7E4F9]/20">
-          <UnionsCarousel />
         </section>
 
         {/* Testimonials Section */}
