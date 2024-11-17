@@ -48,9 +48,9 @@ const TestimonialsCarousel = () => {
   }, []);
 
   return (
-    <div className="min-h-[300px] bg-gradient-to-br from-primary/5 to-secondary/5 py-16">
+    <div className="min-h-[300px] py-16" style={{ backgroundColor: "#a7c1e6" }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">رأي عملائنا</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">رأي عملائنا</h2>
         <div className="relative h-[200px] max-w-3xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
@@ -61,8 +61,8 @@ const TestimonialsCarousel = () => {
               transition={{ duration: 0.5 }}
               className="absolute inset-0"
             >
-              <div className="bg-white rounded-xl p-8 shadow-lg h-full flex flex-col justify-center items-center text-center">
-                <p className="text-lg text-gray-700 mb-6">{testimonials[currentIndex].text}</p>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg h-full flex flex-col justify-center items-center text-center">
+                <p className="text-lg text-gray-900 mb-6">{testimonials[currentIndex].text}</p>
                 <p className="text-primary font-semibold">{testimonials[currentIndex].name}</p>
               </div>
             </motion.div>
